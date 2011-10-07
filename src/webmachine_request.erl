@@ -119,7 +119,7 @@ x_peername(Default) ->
     {undefined, _} ->
         Default;
     {Hosts, _} ->
-        string:strip(lists:last(string:tokens(Hosts, ",")))
+        string:strip(lists:nth(1,string:tokens(Hosts, ",")))
     end.
 
 call(base_uri) ->
